@@ -1,0 +1,16 @@
+CREATE(100, 10, 1, 5; 3)
+CONFIGURE([0] "Coke", 250; "water", 250; "stuff", 205)
+
+UNLOAD([0])
+CHECK_TEARDOWN(0; 0)
+
+
+
+
+
+
+
+
+
+
+

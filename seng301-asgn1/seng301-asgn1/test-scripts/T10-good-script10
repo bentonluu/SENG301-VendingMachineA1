@@ -1,0 +1,37 @@
+CREATE(5, 10, 25, 100; 3)
+CONFIGURE([0] "Coke", 300; "water", 250; "stuff", 205)
+
+CREATE(5, 10, 25, 100; 3)
+CONFIGURE([1] "Pepsi", 300; "water", 250; "stuff", 205)
+
+CREATE(5, 10, 25, 100; 3)
+CONFIGURE([2] "Mango", 250; "water", 250; "stuff", 205)
+
+CREATE(5, 10, 25, 100; 3)
+CONFIGURE([3] "IceTea", 300; "water", 250; "stuff", 205)
+
+COIN_LOAD([2] 0; 5, 1)
+COIN_LOAD([2] 1; 10, 1)
+COIN_LOAD([2] 2; 25, 2)
+
+POP_LOAD([2] 0; "Mango", 1)
+POP_LOAD([2] 1; "water", 1)
+POP_LOAD([2] 2; "stuff", 1)
+
+INSERT([2] 100)
+INSERT([2] 100)
+INSERT([2] 100)
+
+PRESS([2] 0)
+EXTRACT([2])
+CHECK_DELIVERY(50, "Mango")
+
+UNLOAD([2])
+CHECK_TEARDOWN(15; 300; "water", "stuff")
+
+
+
+
+
+
+
